@@ -22,7 +22,7 @@ public class BallRace extends JFrame {
     private static final int WINDOW_HEIGHT = Ball.DIAMETER * NUM_BALLS + 50;
 
     // Массив объектов типа Ball (мячей), размерность массива равна количеству мячей в гонке
-    private static Ball[] balls = new Ball[NUM_BALLS];
+    private static final Ball[] balls = new Ball[NUM_BALLS];
 
     // Флаг, определяющий завершилась ли гонка (по умолчанию - false)
     private static boolean finished = false;

@@ -22,8 +22,8 @@ public class Ball implements Runnable, Comparable<Ball> {
     static Set<Integer> winners;
 
     // Определение полей экземпляра для идентификатора, скорости, пройденного расстояния, позиции, завершенности и потока мяча
-    private final int id;
-    private int speed;
+    private final int ID;
+    private final int speed;
     private int distanceCovered;
     private Point position;
     private boolean finished;
@@ -31,10 +31,10 @@ public class Ball implements Runnable, Comparable<Ball> {
 
     // Конструктор класса Ball, который инициализирует поля экземпляра и запускает поток мяча
     public Ball(int speed, Color ballColor, int trackLength, int finishLine) {
-        this.id = nextId++;
+        this.ID = nextId++;
         this.speed = speed;
         this.distanceCovered = 0;
-        this.position = new Point(RADIUS, id * DIAMETER);
+        this.position = new Point(RADIUS, ID * DIAMETER);
         this.finished = false;
         this.thread = new Thread(this);
         this.thread.start();
@@ -111,12 +111,12 @@ public class Ball implements Runnable, Comparable<Ball> {
             position.setLocation(distanceCovered + RADIUS, position.getY());
         }
         finished = true;
-        winners.add(id);
+        winners.add(ID);
     }
 
     // Метод для рисования мяча
     public void draw(Graphics g) {
-        g.setColor(colors.get(id)); // Устанавливаем цвет мяча
+        g.setColor(colors.get(ID)); // Устанавливаем цвет мяча
         g.fillOval(position.x - RADIUS, position.y - RADIUS, DIAMETER, DIAMETER); // Рисуем мяч с текущей позицией
     }
 
@@ -127,7 +127,7 @@ public class Ball implements Runnable, Comparable<Ball> {
 
     // Метод для получения цвета мяча
     public Color getColor() {
-        return colors.get(id);
+        return colors.get(ID);
     }
 }
 
