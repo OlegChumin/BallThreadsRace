@@ -36,8 +36,10 @@ public class BallRace extends JFrame {
             }
         };
 
-        add(panel);
-        setVisible(true);
+
+        add(panel); // добавляем созданную панель
+        setLocationRelativeTo(null); // центрируем окно по экрану
+        setVisible(true); // делаем окно видимым
 
         for (int i = 0; i < NUM_BALLS; i++) {
             balls[i] = new Ball((int) (Math.random() * (Ball.MAX_SPEED - Ball.MIN_SPEED + 1) + Ball.MIN_SPEED),
