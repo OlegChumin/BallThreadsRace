@@ -95,7 +95,7 @@ public class Ball implements Runnable, Comparable<Ball> {
     public void run() {
         while (distanceCovered < trackLength) {
             try {
-                Thread.sleep(100 - (speed * 9)); // Управление скоростью мяча с помощью задержки
+                Thread.sleep(100 - (speed * 9L)); // Управление скоростью мяча с помощью задержки
             } catch (InterruptedException e) {
                 System.err.println("Error: Thread interrupted");
                 e.printStackTrace();
