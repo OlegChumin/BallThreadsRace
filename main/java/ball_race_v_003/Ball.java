@@ -5,23 +5,33 @@ import java.util.*;
 
 // Определение класса Ball, который реализует интерфейсы Runnable и Comparable<Ball>
 public class Ball implements Runnable, Comparable<Ball> {
-    // Определение статических констант для максимальной и минимальной скорости, радиуса и диаметра мяча, а также массива цветов
+    /**
+     * Определение статических констант для максимальной и минимальной скорости, радиуса и диаметра мяча,
+     * а также массива цветов
+     */
     static final int MAX_SPEED = 10;
     static final int MIN_SPEED = 1;
     static final int RADIUS = 10;
     static final int DIAMETER = RADIUS * 2;
-    static final Color[] COLORS = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.ORANGE, Color.PINK };
+    static final Color[] COLORS = {Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.ORANGE, Color.PINK};
 
-    // Определение статических полей для случайных чисел и следующего идентификатора мяча
+    /**
+     * Определение статических полей для случайных чисел и следующего идентификатора мяча
+     */
     static int nextId = 1;
 
-    // Определение статических полей для длины трека, треков, цветов и победителей
+    /**
+     * Определение статических полей для случайных чисел и следующего идентификатора мяча
+     */
     static int trackLength;
     static Map<Integer, Point[]> tracks;
     static Map<Integer, Color> colors;
     static Set<Integer> winners;
 
-    // Определение полей экземпляра для идентификатора, скорости, пройденного расстояния, позиции, завершенности и потока мяча
+    /**
+     * Определение полей экземпляра для идентификатора, скорости, пройденного расстояния, позиции,
+     * завершенности и потока мяча
+     */
     private final int ID;
     private final int speed;
     private int distanceCovered;
@@ -29,7 +39,13 @@ public class Ball implements Runnable, Comparable<Ball> {
     private boolean finished;
     private Thread thread;
 
-    // Конструктор класса Ball, который инициализирует поля экземпляра и запускает поток мяча
+    /**
+     * Конструктор класса Ball, который инициализирует поля экземпляра и запускает поток мяча
+     * @param speed
+     * @param ballColor
+     * @param trackLength
+     * @param finishLine
+     */
     public Ball(int speed, Color ballColor, int trackLength, int finishLine) {
         this.ID = nextId++;
         this.speed = speed;

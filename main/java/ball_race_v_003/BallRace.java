@@ -6,8 +6,8 @@ import java.awt.*;
 // Определение класса BallRace, который наследует от JFrame
 public class BallRace extends JFrame {
     // Определение необходимых статических полей для работы программы
-// Константа, определяющая длину трассы (400 пикселей)
-    private static final int TRACK_LENGTH = 400;
+// Константа, определяющая длину трассы (500 пикселей)
+    private static final int TRACK_LENGTH = 750;
 
     // Константа, определяющая координату финишной линии (длина трассы минус радиус мяча)
     private static final int FINISH_LINE = TRACK_LENGTH - Ball.RADIUS;
@@ -15,7 +15,7 @@ public class BallRace extends JFrame {
     // Константа, определяющая количество мячей в гонке (6 штук)
     private static final int NUM_BALLS = 6;
 
-    // Константа, определяющая ширину окна (ширина трассы + 50 пикселей)
+    // Константа, определяющая ширину окна (ширина трассы + 200 пикселей)
     private static final int WINDOW_WIDTH = TRACK_LENGTH + 50;
 
     // Константа, определяющая высоту окна (диаметр мяча * количество мячей + 50 пикселей)
@@ -30,7 +30,7 @@ public class BallRace extends JFrame {
 
     // Конструктор класса BallRace
     public BallRace() {
-        setTitle("Ball Race"); // Устанавливаем заголовок окна
+        setTitle("Ball Race by Oleg Chumin"); // Устанавливаем заголовок окна
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT); // Устанавливаем размер окна
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Устанавливаем операцию закрытия окна
 
@@ -52,6 +52,7 @@ public class BallRace extends JFrame {
         add(panel); // добавляем созданную панель
         setLocationRelativeTo(null); // центрируем окно по экрану
         setVisible(true); // делаем окно видимым
+        setResizable(false); // делаем окно неизменным
 
 
         // Создаем мячи и инициализируем их случайными скоростями
