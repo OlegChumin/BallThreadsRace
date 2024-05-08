@@ -13,7 +13,7 @@ public class BallRace extends JFrame {
     private static final int NUM_BALLS = 6;
     private static final int WINDOW_WIDTH = TRACK_LENGTH + 50;
     private static final int WINDOW_HEIGHT = Ball.DIAMETER * NUM_BALLS + 50;
-    private static Ball[] balls = new Ball[NUM_BALLS];
+    private static final Ball[] balls = new Ball[NUM_BALLS];
     private static boolean finished = false;
 
     public BallRace() {

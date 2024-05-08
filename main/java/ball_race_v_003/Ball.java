@@ -13,7 +13,6 @@ public class Ball implements Runnable, Comparable<Ball> {
     static final Color[] COLORS = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.ORANGE, Color.PINK };
 
     // Определение статических полей для случайных чисел и следующего идентификатора мяча
-    static final Random random = new Random();
     static int nextId = 1;
 
     // Определение статических полей для длины трека, треков, цветов и победителей
@@ -23,7 +22,7 @@ public class Ball implements Runnable, Comparable<Ball> {
     static Set<Integer> winners;
 
     // Определение полей экземпляра для идентификатора, скорости, пройденного расстояния, позиции, завершенности и потока мяча
-    private int id;
+    private final int id;
     private int speed;
     private int distanceCovered;
     private Point position;

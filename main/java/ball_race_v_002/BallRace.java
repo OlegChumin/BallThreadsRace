@@ -1,7 +1,6 @@
 package ball_race_v_002;
 
 import java.awt.*; // Импортируем все классы из пакета java.awt для работы с графикой
-import java.util.*; // Импортируем все классы из пакета java.util для работы с коллекциями и другими утилитами
 import javax.swing.*; // Импортируем все классы из пакета javax.swing для работы с графическим пользовательским интерфейсом
 
 // Определение класса BallRace, который наследует от JFrame
@@ -23,7 +22,7 @@ public class BallRace extends JFrame {
     private static final int WINDOW_HEIGHT = Ball.DIAMETER * NUM_BALLS + 50;
 
     // Массив объектов типа Ball (мячей), размерность массива равна количеству мячей в гонке
-    private static Ball[] balls = new Ball[NUM_BALLS];
+    private static final Ball[] balls = new Ball[NUM_BALLS];
 
     // Флаг, определяющий завершилась ли гонка (по умолчанию - false)
     private static boolean finished = false;
