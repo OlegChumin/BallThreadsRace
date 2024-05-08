@@ -87,14 +87,6 @@ public class Ball implements Runnable, Comparable<Ball> {
     }
 
     // Методы доступа к полям экземпляра
-    public int getDistanceCovered() {
-        return distanceCovered;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
     public boolean isFinished() {
         return finished;
     }
@@ -123,11 +115,6 @@ public class Ball implements Runnable, Comparable<Ball> {
     // Метод compareTo() из интерфейса Comparable<Ball> для сравнения мячей по пройденному расстоянию
     public int compareTo(Ball other) {
         return Integer.compare(other.distanceCovered, distanceCovered);
-    }
-
-    // Метод для получения цвета мяча
-    public Color getColor() {
-        return colors.get(ID);
     }
 }
 
