@@ -57,10 +57,6 @@ public class BallRace extends JFrame {
 
         Ball.showResults();
     }
-
-    public static void main(String[] args) {
-        new BallRace();
-    }
 }
 
 
