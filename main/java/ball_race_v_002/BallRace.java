@@ -50,8 +50,10 @@ public class BallRace extends JFrame {
             }
         };
 
-        add(panel); // Добавляем панель на главное окно
-        setVisible(true); // Делаем окно видимым
+        add(panel); // добавляем созданную панель
+        setLocationRelativeTo(null); // центрируем окно по экрану
+        setVisible(true); // делаем окно видимым
+
 
         // Создаем мячи и инициализируем их случайными скоростями
         for (int i = 0; i < NUM_BALLS; i++) {
